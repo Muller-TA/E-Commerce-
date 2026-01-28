@@ -3,41 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Commerce - 404 Error</title>
+    <title>E-Commerce - Account</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet" />
+    <link rel="stylesheet" href="./about.css" />
   </head>
   <body class="antialiased bg-white text-black">
     <!-- Header -->
     <header class="relative">
       <!-- Top Announcement -->
-      <div class="bg-black text-white text-sm font-light">
+      <div
+        class="bg-black text-white text-sm font-light h-[48px] flex items-center">
         <div
-          class="relative flex items-center justify-center text-center px-4 py-2">
+          class="relative w-full max-w-7xl mx-auto px-4 flex items-center justify-center">
+          <!-- Text -->
           <p class="text-center max-w-3xl">
             Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
             <a href="#" class="font-semibold underline ml-2">ShopNow</a>
           </p>
+
+          <!-- Language -->
           <div
-            class="hidden md:flex absolute right-4 top-1/2 transform -translate-y-1/2 items-center gap-2 font-semibold md:right-40">
-            <span class="text-lg">English</span>
-            <span class="ml-1">
-              <svg
-                width="13"
-                height="8"
-                viewBox="0 0 13 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M6.36403 4.95L11.314 0L12.728 1.414L6.36403 7.778L2.67029e-05 1.414L1.41403 0L6.36403 4.95Z"
-                  fill="white" />
-              </svg>
-            </span>
+            class="hidden md:flex absolute right-[9.5%] top-1/2 -translate-y-1/2 items-center gap-2">
+            <span>English</span>
+            <svg
+              width="13"
+              height="8"
+              viewBox="0 0 13 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6.36403 4.95L11.314 0L12.728 1.414L6.36403 7.778L2.67029e-05 1.414L1.41403 0L6.36403 4.95Z"
+                fill="white" />
+            </svg>
           </div>
         </div>
       </div>
+
       <!-- Main header row -->
       <div class="mt-8 flex items-center justify-around px-4 md:px-10 py-3">
         <!-- Logo (left) -->
@@ -128,25 +132,12 @@
 
             <!-- account -->
             <a href="#" class="hover:opacity-70 transition">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M24 27V24.3333C24 22.9188 23.5224 21.5623 22.6722 20.5621C21.8221 19.5619 20.669 19 19.4667 19H11.5333C10.331 19 9.17795 19.5619 8.32778 20.5621C7.47762 21.5623 7 22.9188 7 24.3333V27"
-                  stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path
-                  d="M16.5 14C18.9853 14 21 11.9853 21 9.5C21 7.01472 18.9853 5 16.5 5C14.0147 5 12 7.01472 12 9.5C12 11.9853 14.0147 14 16.5 14Z"
-                  stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="16" fill="#DB4444"/>
+                    <path d="M21 23V21.3333C21 20.4493 20.691 19.6014 20.1408 18.9763C19.5907 18.3512 18.8446 18 18.0667 18H12.9333C12.1554 18 11.4093 18.3512 10.8592 18.9763C10.309 19.6014 10 20.4493 10 21.3333V23" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 15C17.6569 15 19 13.6569 19 12C19 10.3431 17.6569 9 16 9C14.3431 9 13 10.3431 13 12C13 13.6569 14.3431 15 16 15Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
             </a>
           </div>
         </div>
@@ -174,7 +165,6 @@
 
       <!-- thin divider under header -->
       <div class="w-full h-px bg-black/40"></div>
-
       <!-- Mobile Menu (hidden by default) -->
       <div
         id="mobileMenu"
@@ -277,28 +267,88 @@
     </header>
 
     <!-- Breadcrumb -->
-    <div class="mt-10 flex items-center gap-2 px-6 text-sm p-6 ml-[5.5%]">
-      <span class="text-gray-500">Home /</span>
-      <p class="text-black font-medium">404 Error</p>
-    </div>
 
-    <!-- 404 Section -->
-    <main
-      class="flex flex-col justify-center items-center text-center gap-6 mt-12 px-6 pb-20">
-      <h2 class="text-4xl sm:text-6xl md:text-8xl font-semibold pb-2">
-        404 Not Found
-      </h2>
-      <p class="text-black-600 text-base md:text-lg mb-14 max-w-xl">
-        The page you visited was not found. You may go back to the home page.
-      </p>
+    <div class="mt-10 px-6 flex flex-col sm:flex-row sm:items-center  gap-2 text-sm">
+        <!-- Breadcrumb -->
+        <div class="flex flex-wrap items-center gap-1 lg:ml-[5.5%]">
+          <span class="text-gray-500">Home /</span>
+          <p class="text-black font-medium">My Account</p>
+        </div>
+        <!-- Welcome message -->
+        <div class="flex flex-wrap items-center gap-1 mt-2 lg:ml-[63.5%] sm:mt-0">
+          <span>Welcome!</span>
+          <p class="text-[rgba(219,68,68,1)] font-medium">Md Rimel</p>
+        </div>
+      </div>
+      
+    <div class="flex flex-col lg:flex-row gap-6 px-4 lg:px-0">
+        <!-- Sidebar -->
+        <aside
+          class=" p-6 lg:p-10 mt-10 mb-10 lg:mb-20  w-full lg:w-[29%] lg:ml-[3.5%]">       
+            <h4 class="font-medium text-md p-5">Manage My Account</h4>
+            <ul class="menuLinks text-md text-gray-500 ml-[18%]">
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">Address Book</a></li>
+                <li><a href="#">My Payment Options</a></li>
+              </ul>      
+              <h4 class="font-medium text-md p-5">My Orders</h4>
+              <ul class="menuLinks text-md text-gray-500 ml-[18%]">
+                <li><a href="#">My Returns</a></li>
+                <li><a href="#">My Cancellations</a></li>
+              </ul>
+              
+            <h4 class="font-medium text-md p-5">My WishList</h4>
 
-      <a
-        href="#"
-        class="w-[200px] md:w-[250px] h-[50px] inline-flex items-center justify-center bg-[rgba(219,68,68,1)] text-white rounded-[4px] text-[16px] font-normal leading-[24px] mb-8">
-        Back to Home Page
-      </a>
-    </main>
-
+        </aside>
+      
+        <!-- Main content -->
+        <main class="border border-gray-300/10 p-6 lg:p-10 mt-20 mb-10 lg:mb-20 shadow-md w-full lg:w-[700px]">
+            <span class="text-xl font-medium text-[rgba(219,68,68,1)] mb-10">Edit Your Profile</span>
+          <form action="">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- First Name -->
+                <div class="flex flex-col MT-5">
+                  <label for="firstName" class="text-md font-medium mb-1">First Name</label>
+                  <input type="text" id="firstName" placeholder="Md" class="w-full h-[50px] rounded px-5 py-2 bg-gray-100 text-black text-md outline-none" />
+                </div>          
+                <!-- Last Name -->
+                <div class="flex flex-col">
+                  <label for="lastName" class="text-md font-medium mb-1">Last Name</label>
+                  <input type="text" id="lastName" placeholder="Rimel" class="w-full h-[50px] rounded px-5 py-2 bg-gray-100 text-black text-md outline-none" />
+                </div>     
+                <!-- Email -->
+                <div class="flex flex-col">
+                  <label for="email" class="text-md font-medium mb-1">Email</label>
+                  <input type="text" id="email" placeholder="rimel1111@gmail.com" class="w-full h-[50px] rounded px-5 py-2 bg-gray-100 text-black text-md outline-none" />
+                </div>           
+                <!-- Address -->
+                <div class="flex flex-col">
+                  <label for="address" class="text-md font-medium mb-1">Address</label>
+                  <input type="text" id="address" placeholder="Kingston, 5236, United State" class="w-full h-[50px] rounded px-5 py-2 bg-gray-100 text-black text-md outline-none" />
+                </div>
+              </div>
+                   <div class="text-md mt-8">
+                    <label for="input">Password Changes</label>
+                    <input type="text" id="address" placeholder="Current Passwod" class="w-full h-[50px] rounded px-5 py-2 mt-2 bg-gray-100 text-black text-md outline-none" />
+                    <input type="text" id="address" placeholder="New Passwod" class="w-full h-[50px] rounded px-5 py-2 mt-5 bg-gray-100 text-black text-md outline-none" />
+                    <input type="text" id="address" placeholder="Confirm New Passwod" class="w-full h-[50px] rounded px-5 py-2 mt-5 bg-gray-100 text-black text-md outline-none" />
+                </div>
+                <div class="mt-5 flex flex-col sm:flex-row gap-4 justify-end ">
+                    <!-- Cancel button -->
+                    <button class=" text-black rounded-[4px]">
+                      Cancel
+                    </button> 
+                    <!-- Save Changes button -->
+                    <button class=" h-[56px] w-[230px] bg-[rgba(219,68,68,1)] text-white rounded-[4px]">
+                      Save Changes
+                    </button>
+                  </div>
+                  
+          </form>
+        </main>
+      </div>
+      
+</div>
     <!-- Footer -->
     <footer class="bg-black text-white pt-10">
       <div class="max-w-[1440px] mx-auto px-6">
@@ -602,6 +652,6 @@
       </div>
     </footer>
 
-    <script src="./scripts/error.js"></script>
+    <script src="./scripts/account.js"></script>
   </body>
 </html>

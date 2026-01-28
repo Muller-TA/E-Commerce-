@@ -1,306 +1,168 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Commerce - 404 Error</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet" />
+    <link rel="stylesheet" href="./about.css" />
+    <title>E Commerce Signup</title>
   </head>
-  <body class="antialiased bg-white text-black">
-    <!-- Header -->
-    <header class="relative">
+  <body>
+    <header>
       <!-- Top Announcement -->
-      <div class="bg-black text-white text-sm font-light">
+      <div
+        class="top-announcement relative bg-black text-white text-center py-2 text-sm font-light">
+        <p class="mx-auto max-w-3xl px-4">
+          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+          <span class="font-semibold underline ml-2">ShopNow</span>
+        </p>
         <div
-          class="relative flex items-center justify-center text-center px-4 py-2">
-          <p class="text-center max-w-3xl">
-            Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
-            <a href="#" class="font-semibold underline ml-2">ShopNow</a>
-          </p>
-          <div
-            class="hidden md:flex absolute right-4 top-1/2 transform -translate-y-1/2 items-center gap-2 font-semibold md:right-40">
-            <span class="text-lg">English</span>
-            <span class="ml-1">
-              <svg
-                width="13"
-                height="8"
-                viewBox="0 0 13 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M6.36403 4.95L11.314 0L12.728 1.414L6.36403 7.778L2.67029e-05 1.414L1.41403 0L6.36403 4.95Z"
-                  fill="white" />
-              </svg>
-            </span>
-          </div>
+          class="hidden sm:flex absolute right-4 top-1/2 transform -translate-y-1/2 items-center gap-2 md:right-40">
+          <span class="">English</span>
+          <span class="ml-1">
+            <svg
+              width="13"
+              height="8"
+              viewBox="0 0 13 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6.36403 4.95L11.314 0L12.728 1.414L6.36403 7.778L2.67029e-05 1.414L1.41403 0L6.36403 4.95Z"
+                fill="white" />
+            </svg>
+          </span>
         </div>
       </div>
-      <!-- Main header row -->
-      <div class="mt-8 flex items-center justify-around px-4 md:px-10 py-3">
-        <!-- Logo (left) -->
-        <a href="#" class="font-bold text-2xl">Exclusive</a>
-        <nav class="hidden md:flex justify-between">
-          <ul id="mainMenu" class="flex gap-10 text-base leading-6 font-normal">
-            <li><a href="#" class="hover:underline">Home</a></li>
-            <li><a href="#" class="hover:underline">Contact</a></li>
-            <li><a href="#" class="hover:underline">About</a></li>
-            <li><a href="#" class="hover:underline">Sign up</a></li>
-          </ul>
-        </nav>
-        <div class="hidden md:flex items-center justify-around px-12 gap-6">
-          <!-- Search -->
-          <div class="relative w-[243px] h-[38px]">
-            <input
-              type="text"
-              placeholder="What are you looking for?"
-              class="w-full h-full rounded pt-[7px] pr-[12px] pb-[7px] pl-[20px] bg-[rgba(245,245,245,1)] text-black text-xs outline-none" />
+      <div class="header mt-8 flex items-center justify-around px-6 relative">
+        <!-- Logo -->
+        <span class="font-bold text-2xl">Exclusive</span>
+
+        <ul
+          id="mainMenu"
+          class="list-none flex gap-10 text-base leading-6 font-normal font-poppins hidden md:flex">
+          <li class="text-center">Home</li>
+          <li class="text-center">Contact</li>
+          <li class="text-center">About</li>
+          <li class="relative text-center">
+            Sign up
             <span
-              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-4 h-4">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 18 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M16.75 16.75L12.9723 12.9656M15.0658 7.90789C15.0658 9.80629 14.3117 11.6269 12.9693 12.9693C11.6269 14.3117 9.80629 15.0658 7.90789 15.0658C6.0095 15.0658 4.18886 14.3117 2.8465 12.9693C1.50413 11.6269 0.75 9.80629 0.75 7.90789C0.75 6.0095 1.50413 4.18886 2.8465 2.8465C4.18886 1.50413 6.0095 0.75 7.90789 0.75C9.80629 0.75 11.6269 1.50413 12.9693 2.8465C14.3117 4.18886 15.0658 6.0095 15.0658 7.90789V7.90789Z"
-                  stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round" />
-              </svg>
-            </span>
-          </div>
-          <!-- Icons -->
-          <div class="flex items-center gap-4">
-            <!-- wishlist -->
-            <a href="#" class="hover:opacity-70 transition">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M11 7C8.239 7 6 9.216 6 11.95C6 14.157 6.875 19.395 15.488 24.69C15.6423 24.7839 15.8194 24.8335 16 24.8335C16.1806 24.8335 16.3577 24.7839 16.512 24.69C25.125 19.395 26 14.157 26 11.95C26 9.216 23.761 7 21 7C18.239 7 16 10 16 10C16 10 13.761 7 11 7Z"
-                  stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </a>
-            <!-- cart -->
-            <a href="#" class="hover:opacity-70 transition">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M11 27C11.5523 27 12 26.5523 12 26C12 25.4477 11.5523 25 11 25C10.4477 25 10 25.4477 10 26C10 26.5523 10.4477 27 11 27Z"
-                  stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path
-                  d="M25 27C25.5523 27 26 26.5523 26 26C26 25.4477 25.5523 25 25 25C24.4477 25 24 25.4477 24 26C24 26.5523 24.4477 27 25 27Z"
-                  stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path
-                  d="M3 5H7L10 22H26"
-                  stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path
-                  d="M10 16.6667H25.59C25.7056 16.6667 25.8177 16.6267 25.9072 16.5535C25.9966 16.4802 26.0579 16.3782 26.0806 16.2648L27.8806 7.26479C27.8951 7.19222 27.8934 7.11733 27.8755 7.04552C27.8575 6.97371 27.8239 6.90678 27.7769 6.84956C27.73 6.79234 27.6709 6.74625 27.604 6.71462C27.5371 6.68299 27.464 6.66661 27.39 6.66666H8"
-                  stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </a>
+              class="block w-[61px] h-[1px] bg-black opacity-50 mx-auto"></span>
+          </li>
+        </ul>
 
-            <!-- account -->
-            <a href="#" class="hover:opacity-70 transition">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M24 27V24.3333C24 22.9188 23.5224 21.5623 22.6722 20.5621C21.8221 19.5619 20.669 19 19.4667 19H11.5333C10.331 19 9.17795 19.5619 8.32778 20.5621C7.47762 21.5623 7 22.9188 7 24.3333V27"
-                  stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path
-                  d="M16.5 14C18.9853 14 21 11.9853 21 9.5C21 7.01472 18.9853 5 16.5 5C14.0147 5 12 7.01472 12 9.5C12 11.9853 14.0147 14 16.5 14Z"
-                  stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </a>
-          </div>
+        <!-- Mobile Expandable Menu -->
+        <div
+          id="mobileMenu"
+          class="absolute left-0 right-0 top-full hidden bg-black text-white md:hidden">
+          <ul class="flex flex-col gap-6 px-6 py-6">
+            <li class="border-b border-white/20 pb-4">Home</li>
+            <li class="border-b border-white/20 pb-4">Contact</li>
+            <li class="border-b border-white/20 pb-4">About</li>
+            <li class="pb-4">Sign up</li>
+          </ul>
         </div>
-
-        <!-- Hamburger button (mobile only) -->
-        <button
-          id="hamburgerBtn"
-          aria-expanded="false"
-          aria-controls="mobileMenu"
-          class="md:hidden p-2 rounded focus:outline-none focus:ring">
-          <svg
-            class="w-6 h-6"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M4 6h16M4 12h16M4 18h16"
-              stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
+        <!-- Search -->
+        <div class="relative w-[243px] h-[38px]">
+          <input
+            type="text"
+            placeholder="What are you looking for?"
+            class="w-full h-full rounded pt-[7px] pr-[12px] pb-[7px] pl-[20px] bg-[rgba(245,245,245,1)] text-black text-xs outline-none" />
+          <span
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.75 16.75L12.9723 12.9656M15.0658 7.90789C15.0658 9.80629 14.3117 11.6269 12.9693 12.9693C11.6269 14.3117 9.80629 15.0658 7.90789 15.0658C6.0095 15.0658 4.18886 14.3117 2.8465 12.9693C1.50413 11.6269 0.75 9.80629 0.75 7.90789C0.75 6.0095 1.50413 4.18886 2.8465 2.8465C4.18886 1.50413 6.0095 0.75 7.90789 0.75C9.80629 0.75 11.6269 1.50413 12.9693 2.8465C14.3117 4.18886 15.0658 6.0095 15.0658 7.90789V7.90789Z"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round" />
+            </svg>
+          </span>
+        </div>
+        <!-- Hamburger (Mobile) -->
+        <button id="hamburgerBtn" class="md:hidden text-2xl font-bold">
+          ☰
         </button>
       </div>
-
-      <!-- thin divider under header -->
-      <div class="w-full h-px bg-black/40"></div>
-
-      <!-- Mobile Menu (hidden by default) -->
-      <div
-        id="mobileMenu"
-        class="hidden md:hidden absolute left-0 right-0 top-full bg-black text-white z-50">
-        <!-- Mobile Icons row -->
-        <div
-          class="flex items-center justify-center gap-6 py-4 border-b border-white/20">
-          <a href="#" class="hover:opacity-70 transition">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M11 7C8.239 7 6 9.216 6 11.95C6 14.157 6.875 19.395 15.488 24.69C15.6423 24.7839 15.8194 24.8335 16 24.8335C16.1806 24.8335 16.3577 24.7839 16.512 24.69C25.125 19.395 26 14.157 26 11.95C26 9.216 23.761 7 21 7C18.239 7 16 10 16 10C16 10 13.761 7 11 7Z"
-                stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </a>
-          <a href="#" class="hover:opacity-70 transition">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M11 27C11.5523 27 12 26.5523 12 26C12 25.4477 11.5523 25 11 25C10.4477 25 10 25.4477 10 26C10 26.5523 10.4477 27 11 27Z"
-                stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path
-                d="M25 27C25.5523 27 26 26.5523 26 26C26 25.4477 25.5523 25 25 25C24.4477 25 24 25.4477 24 26C24 26.5523 24.4477 27 25 27Z"
-                stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path
-                d="M3 5H7L10 22H26"
-                stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path
-                d="M10 16.6667H25.59C25.7056 16.6667 25.8177 16.6267 25.9072 16.5535C25.9966 16.4802 26.0579 16.3782 26.0806 16.2648L27.8806 7.26479C27.8951 7.19222 27.8934 7.11733 27.8755 7.04552C27.8575 6.97371 27.8239 6.90678 27.7769 6.84956C27.73 6.79234 27.6709 6.74625 27.604 6.71462C27.5371 6.68299 27.464 6.66661 27.39 6.66666H8"
-                stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </a>
-
-          <a href="#" class="hover:opacity-70 transition">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M24 27V24.3333C24 22.9188 23.5224 21.5623 22.6722 20.5621C21.8221 19.5619 20.669 19 19.4667 19H11.5333C10.331 19 9.17795 19.5619 8.32778 20.5621C7.47762 21.5623 7 22.9188 7 24.3333V27"
-                stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round" />
-              <path
-                d="M16.5 14C18.9853 14 21 11.9853 21 9.5C21 7.01472 18.9853 5 16.5 5C14.0147 5 12 7.01472 12 9.5C12 11.9853 14.0147 14 16.5 14Z"
-                stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </a>
-        </div>
-
-        <!-- Mobile links -->
-        <nav class="px-6 py-6">
-          <ul class="flex flex-col gap-6">
-            <li>
-              <a href="#" class="block pb-4 border-b border-white/20">Home</a>
-            </li>
-            <li>
-              <a href="#" class="block pb-4 border-b border-white/20"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a href="#" class="block pb-4 border-b border-white/20">About</a>
-            </li>
-            <li><a href="#" class="block">Sign up</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <!-- Mobile menu script -->
     </header>
+    <!-- thin divider under header -->
+    <div class="w-full h-px bg-black/40 mt-7"></div>
 
-    <!-- Breadcrumb -->
-    <div class="mt-10 flex items-center gap-2 px-6 text-sm p-6 ml-[5.5%]">
-      <span class="text-gray-500">Home /</span>
-      <p class="text-black font-medium">404 Error</p>
+    <!-- Main Content -->
+    <div class="min-h-screen grid grid-cols-1 lg:grid-cols-12 mt-10">
+      <div class="hidden lg:block lg:col-span-7">
+        <img
+          src="./imgs/phone.jpg"
+          alt="Image"
+          class="w-full h-full object-cover" />
+      </div>
+      <div class="col-span-1 lg:col-span-5 flex items-center justify-center">
+        <div class="w-full max-w-md bg-white p-6 rounded-lg">
+          <div class="mb-10 text-center">
+            <h2 class="text-3xl font-medium mb-2">Create an account</h2>
+            <p class="text-gray-600">Enter your details below</p>
+          </div>
+          <form class="space-y-6">
+            <input
+              type="text"
+              placeholder="Name"
+              class="w-full border-b border-gray-400 px-2 py-2 bg-transparent outline-none" />
+
+            <input
+              type="text"
+              placeholder="Email or Phone Number"
+              class="w-full border-b border-gray-400 px-2 py-2 bg-transparent outline-none" />
+
+            <input
+              type="password"
+              placeholder="Password"
+              class="w-full border-b border-gray-400 px-2 py-2 bg-transparent outline-none" />
+
+            <button class="w-full h-[40px] bg-[rgba(219,68,68,1)] text-white">
+              Create Account
+            </button>
+
+            <!-- Google -->
+            <button
+              class="w-full h-[44px] flex items-center justify-center gap-3 border border-gray-400 rounded-sm">
+              <svg width="20" height="20" viewBox="0 0 48 48">
+                <path
+                  fill="#EA4335"
+                  d="M24 9.5c3.14 0 5.96 1.08 8.18 2.86l6.1-6.1C34.7 3.06 29.7 1 24 1 14.64 1 6.77 6.36 3.13 14.1l7.38 5.73C12.3 13.08 17.67 9.5 24 9.5z" />
+                <path
+                  fill="#4285F4"
+                  d="M46.1 24.5c0-1.6-.14-2.77-.44-3.98H24v7.54h12.7c-.26 2.04-1.67 5.1-4.8 7.17l7.36 5.7C43.7 36.9 46.1 31.3 46.1 24.5z" />
+                <path
+                  fill="#FBBC05"
+                  d="M10.5 28.8c-.48-1.42-.76-2.94-.76-4.5s.28-3.08.74-4.5l-7.38-5.73C1.7 16.9 1 20.36 1 24.3c0 3.92.7 7.36 2.1 10.23l7.4-5.73z" />
+                <path
+                  fill="#34A853"
+                  d="M24 47c5.7 0 10.5-1.87 14-5.07l-7.36-5.7c-1.98 1.38-4.64 2.34-6.64 2.34-6.3 0-11.64-3.6-13.5-8.8l-7.4 5.73C6.75 41.6 14.64 47 24 47z" />
+              </svg>
+              <span>Sign in with Google</span>
+            </button>
+
+            <!-- Login -->
+            <div class="flex justify-center gap-2 text-sm mt-4">
+              <span>Already have account?</span>
+              <span class="relative cursor-pointer font-medium">
+                Log in
+                <span
+                  class="block w-[47px] h-[1px] bg-black opacity-50 mx-auto"></span>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-
-    <!-- 404 Section -->
-    <main
-      class="flex flex-col justify-center items-center text-center gap-6 mt-12 px-6 pb-20">
-      <h2 class="text-4xl sm:text-6xl md:text-8xl font-semibold pb-2">
-        404 Not Found
-      </h2>
-      <p class="text-black-600 text-base md:text-lg mb-14 max-w-xl">
-        The page you visited was not found. You may go back to the home page.
-      </p>
-
-      <a
-        href="#"
-        class="w-[200px] md:w-[250px] h-[50px] inline-flex items-center justify-center bg-[rgba(219,68,68,1)] text-white rounded-[4px] text-[16px] font-normal leading-[24px] mb-8">
-        Back to Home Page
-      </a>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-black text-white pt-10">
+    <footer class="bg-black text-white pt-10 mt-20">
       <div class="max-w-[1440px] mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <!-- Left Column -->
@@ -534,7 +396,6 @@
                       </clipPath>
                     </defs>
                   </svg>
-
                   <svg
                     width="24"
                     height="24"
@@ -602,6 +463,6 @@
       </div>
     </footer>
 
-    <script src="./scripts/error.js"></script>
+    <script src="./scripts/signup.js"></script>
   </body>
 </html>
