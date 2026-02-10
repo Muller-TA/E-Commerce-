@@ -231,123 +231,166 @@
         <text x="45" y="25" font-family="Poppins, sans-serif" font-size="14" font-weight="bold" fill="black">Category</text>
     </svg></button>
       
-      <div class="relative flex">
-    <div id="overlay" class="overlay fixed inset-0 bg-black bg-opacity-50 z-30 hidden" onclick="closeSidebar()"></div>
+    <div class="relative flex">
+      <!-- Overlay for mobile sidebar -->
+      <div id="overlay" 
+      class="overlay fixed inset-0 bg-black bg-opacity-50 z-30 hidden" 
+      onclick="closeSidebar()">
+ </div>
+ 
+ <!-- Sidebar -->
+ <aside id="sidebar" 
+ class="sidebar w-[80px] md:w-[200px] pr-4 py-10 shrink-0 bg-white shadow-lg md:shadow-none fixed md:relative top-0 left-0 h-full z-40 md:z-auto transform -translate-x-full md:translate-x-0 transition-all duration-300">
 
-    <aside id="sidebar" class="sidebar w-[80px] md:w-[200px]  pr-4 py-10 shrink-0 bg-white shadow-lg md:shadow-none fixed md:relative top-0 left-0 h-full z-40 md:z-auto transform -translate-x-full md:translate-x-0">
-        <button id="closeSidebar" class="md:hidden absolute top-4 right-4 text-gray-600 hover:text-gray-900">
-            <i class="fas fa-times text-2xl"></i>
-        </button>        
-          <nav>
-            <ul class="text-xs md:text-base">
-                <a href="" class="block mb-4">
-                    <li class="flex justify-between items-center">
-                        Woman’s Fashion
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.95 11.636L8 6.68597L9.414 5.27197L15.778 11.636L9.414 18L8 16.586L12.95 11.636Z" fill="black"/>
-                        </svg>
-                    </li>
-                </a>       
-                <a href="" class="block mb-4">
-                    <li class="flex justify-between items-center">
-                        Men's Fashion
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.95 11.636L8 6.68597L9.414 5.27197L15.778 11.636L9.414 18L8 16.586L12.95 11.636Z" fill="black"/>
-                        </svg>
-                    </li>
-                </a>
-                
-                <a href="" class="block mb-4">
-                    <li>Electronics</li>
-                </a>
-                
-                <a href="" class="block mb-4">
-                    <li>Home & Lifestyle</li>
-                </a>
-                
-                <a href="" class="block mb-4">
-                    <li>Medicine</li>
-                </a>
-                
-                <a href="" class="block mb-4">
-                    <li>Sports & Outdoor</li>
-                </a>
-                
-                <a href="" class="block mb-4">
-                    <li>Baby’s & Toys</li>
-                </a>
-                
-                <a href="" class="block mb-4">
-                    <li>Groceries & Pets</li>
-                </a>
-                
-                <a href="" class="block">
-                    <li>Health & Beauty</li>
-                </a>
-            </ul>
-            <div
-            class=" absolute top-0 bottom-0
-                   left-[80px] md:left-[220px]
-                   w-[0.5px] bg-black opacity-30">
-          </div> </nav>
-    </aside>           
-        <!-- Divider -->
-      
-          <main class="relative flex-1 bg-black text-white lg:ml-16 mt-10 max-h-[344px] overflow-hidden ">
-          <div class="flex flex-col lg:flex-row items-center ml-8">
-              <!-- Content -->
-              <div class="relative z-20 flex flex-col items-start justify-center px-6 sm:px-8 py-16 ">
-                <div class="flex-1 relative h-[260px] sm:h-[352px] lg:h-[400px] mr-12 overflow-hidden">
-                  <img
-                    src="./imgs/landing.jpg"
-                    alt="iPhone 14"
-                    class="absolute inset-0 w-full h-full object-cover"
-                  />
+<!-- Close button for mobile -->
+<button id="closeSidebar" 
+       class="md:hidden absolute top-4 right-4 text-gray-600 hover:text-gray-900">
+   <i class="fas fa-times text-2xl"></i>
+</button>
+
+<!-- Navigation -->
+<nav class="h-full px-2 md:px-0 overflow-hidden">
+   <ul class="text-sm md:text-base  ">
+       <!-- First item - hidden when sidebar is collapsed -->
+       <li >
+           <a href="" class="flex justify-between items-center hover:text-gray-700 transition-colors pb-2">
+               <span class="truncate">Woman’s Fashion</span>
+               <svg width="20" height="20" class="shrink-0 ml-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path d="M12.95 11.636L8 6.68597L9.414 5.27197L15.778 11.636L9.414 18L8 16.586L12.95 11.636Z" fill="currentColor"/>
+               </svg>
+           </a>
+       </li>
+
+       <li >
+           <a href="" class="flex justify-between items-center hover:text-gray-700 transition-colors py-2">
+               <span class="truncate">Men's Fashion</span>
+               <svg width="20" height="20" class="shrink-0 ml-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path d="M12.95 11.636L8 6.68597L9.414 5.27197L15.778 11.636L9.414 18L8 16.586L12.95 11.636Z" fill="currentColor"/>
+               </svg>
+           </a>
+       </li>
+     
+       <!-- Other items with icons for mobile -->
+       <li >
+           <a href="" class="block hover:text-gray-700 transition-colors py-2">
+               <span class="truncate">Electronics</span>
+           </a>
+       </li>
+  
+       
+       <li >
+           <a href="" class="block hover:text-gray-700 transition-colors py-2">
+               <span class="truncate">Home & Lifestyle</span>
+           </a>
+       </li>
+       
+   
+       <li >
+           <a href="" class="block hover:text-gray-700 transition-colors py-2">
+               <span class="truncate">Medicine</span>
+           </a>
+       </li>
+       
+   
+       
+       <li >
+           <a href="" class="block hover:text-gray-700 transition-colors py-2">
+               <span class="truncate">Sports & Outdoor</span>
+           </a>
+       </li>
+   
+       
+       <li >
+           <a href="" class="block hover:text-gray-700 transition-colors py-2">
+               <span class="truncate">Baby's & Toys</span>
+           </a>
+       </li>
+       
+
+       
+       <li >
+           <a href="" class="block hover:text-gray-700 transition-colors py-2 ">
+               <span class="truncate">Groceries & Pets</span>
+           </a>
+       </li>
+
+       
+       <li >
+           <a href="" class="block hover:text-gray-700 transition-colors pt-2 ">
+               <span class="truncate">Health & Beauty</span>
+           </a>
+       </li>
+   </ul>
+   
+   <!-- Vertical Divider -->
+   <div class="absolute top-0 bottom-0 left-full w-[0.5px] bg-black opacity-20 lg:h-[384.00000000000034px]"></div>
+</nav>
+</aside>
+      <!-- Main Content -->
+      <main class="relative flex-1 bg-black text-white mt-10 ml-5 md:ml-10 mr-5 lg:mr-0 overflow-hidden max-h-[344px]">
+        <div class="flex flex-row items-center h-full pl-4 sm:pl-8 md:pl-12 lg:pl-16 ">
+            <div class="relative z-20 flex flex-col items-start justify-center w-1/2">
+                <!-- Apple logo and iPhone text -->
+                <div class="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 mb-3 sm:mb-4 md:mb-5 lg:mb-6">
+                    <img 
+                        src="./imgs/apple.png" 
+                        class="w-8 h-10 sm:w-10 sm:h-12 md:w-12 md:h-14 lg:w-16 lg:h-20 xl:w-[40px] xl:h-[49px]" 
+                        alt="Apple Logo"
+                        loading="lazy"
+                    />
+                    <span class="text-white text-sm sm:text-base md:text-md ">iPhone 14 Series</span>
                 </div>
-                <div class="flex items-center gap-2 mb-0 sm:mb-4">
-                  <img src="./imgs/apple.png" class="w-[32px] h-[39px] sm:w-[40px] sm:h-[49px]" alt="Apple Logo">
-                  <span class="text-white text-sm sm:text-md">iPhone 14 Series</span>
-              </div>
-                  <h2 class=" text-lg text-white lg:text-5xl font-semibold lg:w-[292px] ">
-                    Up to 10% off Voucher
-                </h2>
-                  <a href="#" class="mt-4 text-white font-medium text-lg border-b border-white pb-1 flex items-center gap-2 hover:gap-4 transition-all">
-                      <span>Shop Now</span>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3.5 12H20M20 12L13 5M20 12L13 19" stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                  </a>
-              </div>
-      
-              <!-- Image -->
-              <div class="flex-1 relative h-[260px] sm:h-[352px] lg:h-[400px] mr-12 overflow-hidden">
-                <img
-                  src="./imgs/landing.jpg"
-                  alt="iPhone 14"
-                  class="absolute inset-0 w-full h-full object-cover"
-                />
-              </div>
-          </div>
-          </div>
-          <div class="flex justify-center items-center gap-2 mb-4 ">
+                
+                <h2 class="
+                text-xl sm:text-2xl md:text-3xl lg:text-5xl
+                leading-tight md:leading-normal lg:leading-relaxed xl:leading-[60px]
+                tracking-tight md:tracking-normal lg:tracking-wide xl:tracking-[0.04em]
+                text-white font-semibold
+                mb-4 sm:mb-5 md:mb-6 lg:mb-8 xl:mb-10
+                w-full
+              ">
+                Up to 10%<br>
+                off Voucher
+              </h2>
+              
+
+                
+               <div class = "flex gap-3 items-center"> <a href="#" 
+                   class="text-white font-medium text-base sm:text-lg md:text-md border-b border-white pb-1 flex items-center gap-2 sm:gap-3 hover:gap-4 transition-all duration-300 group">
+                    <span class="group-hover:translate-x-1 transition-transform duration-300">Shop Now</span>
+                    
+                </a><svg width="20" height="20" class="sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 xl:w-6 xl:h-6 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.5 12H20M20 12L13 5M20 12L13 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg></div>
+            </div>
             
-            <span class="w-[14px] h-[14px] cursor-pointer rounded-full bg-gray-500"></span>
-          
-            <span class="w-[14px] h-[14px] cursor-pointer rounded-full bg-gray-400"></span>
-          
-            <span class="w-[14px] h-[14px] cursor-pointer rounded-full bg-red-400"></span>
-          
-            <span class="w-[14px] h-[14px] cursor-pointer rounded-full bg-gray-400"></span>
-          
-            <span class="w-[14px] h-[14px] cursor-pointer rounded-full bg-gray-400"></span>
-          </div>
-          
-      </main>
-    
-      </div>
-    
+            <div class="relative w-1/2 flex justify-end pr-4 sm:pr-8 md:pr-12 lg:pr-16 xl:pr-0">
+                <div class="relative overflow-hidden 
+                            w-[120px] h-[85px] 
+                            sm:w-[160px] sm:h-[114px] 
+                            md:w-[250px] md:h-[142px] 
+                            lg:w-[496px] lg:h-[352px] 
+                            mt-4 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-0 xl:pt-4 xl:pr-16">
+                    <img
+                        src="./imgs/landing.jpg"
+                        alt="iPhone 14"
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dots container -->
+        <div class="absolute bottom-4 left-0 right-0 flex justify-center items-center gap-2">
+            <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 cursor-pointer rounded-full bg-gray-400 hover:bg-gray-300 transition-colors"></span>
+            <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 cursor-pointer rounded-full bg-gray-400 hover:bg-gray-300 transition-colors"></span>
+            <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 cursor-pointer rounded-full bg-red-400 hover:bg-red-300 transition-colors"></span>
+            <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 cursor-pointer rounded-full bg-gray-400 hover:bg-gray-300 transition-colors"></span>
+            <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 cursor-pointer rounded-full bg-gray-400 hover:bg-gray-300 transition-colors"></span>
+        </div>
+    </main>
     </section>
-    
     
     <!-- End Landing -->
 <!-- Start flash sales -->
@@ -1525,60 +1568,65 @@
     </section>
     <!-- End Sales -->
     <!-- Start Cover -->
-    <section class="relative max-w-[1170px] mx-auto bg-black overflow-hidden flex flex-col lg:flex-row items-center">
-
-      <!-- content -->
-      <div class="relative z-20 flex flex-col items-start justify-center px-6 sm:px-8 py-16 max-w-[550px]">
-        <span class="text-[rgba(0,255,102,1)] uppercase tracking-wide text-sm mb-4 text-left">
-          Categories
-        </span>
-    
-        <h2 class="text-white text-5xl font-semibold leading-tight text-left">
-          Enhance Your Music Experience
-        </h2>
-    
-        <div class="flex justify-start gap-4 mt-8 w-full flex-wrap">
-          <!-- Circles -->
-          <div class="w-[62px] h-[62px] bg-white rounded-full flex flex-col items-center justify-center text-xs">
-            <span class="font-semibold text-base">35</span>
-            <span class="text-[10px]">Seconds</span>
-          </div>
-          <div class="w-[62px] h-[62px] bg-white rounded-full flex flex-col items-center justify-center text-xs">
-            <span class="font-semibold text-base">35</span>
-            <span class="text-[10px]">Seconds</span>
-          </div>
-          <div class="w-[62px] h-[62px] bg-white rounded-full flex flex-col items-center justify-center text-xs">
-            <span class="font-semibold text-base">35</span>
-            <span class="text-[10px]">Seconds</span>
-          </div>
-          <div class="w-[62px] h-[62px] bg-white rounded-full flex flex-col items-center justify-center text-xs">
-            <span class="font-semibold text-base">35</span>
-            <span class="text-[10px]">Seconds</span>
+    <section class="relative max-w-[1170px] h-[500px] mx-auto bg-black overflow-hidden mt-8 sm:mt-12 lg:mt-20 px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-6 lg:gap-12 h-full">
+        
+        <div class="relative z-30 w-full sm:w-1/2 flex items-start justify-center">
+          <div class="flex flex-col items-center sm:items-start justify-start w-full max-w-md pt-4 sm:pt-8 lg:pt-12">
+            <span class="text-[rgba(0,255,102,1)] tracking-wide text-xs sm:text-sm lg:text-base mb-2 sm:mb-3 lg:mb-4 font-medium text-center sm:text-left">
+              Categories
+            </span>  
+            
+            <h2 class="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight text-center sm:text-left mb-6 sm:mb-8 lg:mb-10">
+              Enhance Your <br class="hidden sm:block" /> Music Experience
+            </h2>
+            
+            <!-- Timer Circles -->
+            <div class="flex justify-center sm:justify-start gap-3 sm:gap-4 lg:gap-6 mb-8 sm:mb-10 lg:mb-12">
+              <div class="w-[50px] h-[50px] sm:w-[55px] sm:h-[55px] lg:w-[62px] lg:h-[62px] bg-white rounded-full flex flex-col items-center justify-center">
+                <span class="font-semibold text-sm sm:text-base">23</span>
+                <span class="text-[9px] sm:text-[10px]">Hours</span>
+              </div>
+              <div class="w-[50px] h-[50px] sm:w-[55px] sm:h-[55px] lg:w-[62px] lg:h-[62px] bg-white rounded-full flex flex-col items-center justify-center">
+                <span class="font-semibold text-sm sm:text-base">05</span>
+                <span class="text-[9px] sm:text-[10px]">Days</span>
+              </div>
+              <div class="w-[50px] h-[50px] sm:w-[55px] sm:h-[55px] lg:w-[62px] lg:h-[62px] bg-white rounded-full flex flex-col items-center justify-center">
+                <span class="font-semibold text-sm sm:text-base">59</span>
+                <span class="text-[9px] sm:text-[10px]">Minutes</span>
+              </div>
+              <div class="w-[50px] h-[50px] sm:w-[55px] sm:h-[55px] lg:w-[62px] lg:h-[62px] bg-white rounded-full flex flex-col items-center justify-center">
+                <span class="font-semibold text-sm sm:text-base">35</span>
+                <span class="text-[9px] sm:text-[10px]">Seconds</span>
+              </div>
+            </div>  
+            
+            <!-- Button -->
+            <button
+              class="w-[120px] sm:w-[130px] lg:w-[171px] h-[40px] sm:h-[44px] lg:h-[56px] bg-[rgba(0,255,102,1)] text-white rounded-[4px] 
+                     flex items-center justify-center text-xs sm:text-sm lg:text-base font-medium hover:opacity-90 transition mx-auto sm:mx-0">
+              Buy Now!
+            </button>
           </div>
         </div>
-    
-        <button
-          class="mt-8 w-[140px] sm:w-[171px] h-[56px] bg-[rgba(0,255,102,1)] text-white rounded-[4px] 
-                 flex items-center justify-center px-12 py-4 text-sm sm:text-base font-medium hover:opacity-90 transition">
-          Buy Now!
-        </button>
-      </div>
-    
-      <!-- image / glow -->
-      <div class="flex-1 relative w-full sm:h-[400px] overflow-hidden">
         
-        <!-- Glow effect -->
-        <div class="absolute w-[500px] h-full rounded-full bg-gradient-to-tr from-[rgba(218,218,218,0.2)] to-[rgba(218,218,218,0)] blur-[200px] z-0"></div>
-    
-        <!-- Image -->
-        <img
-          src="./imgs/cover.png"
-          alt=""
-          class="absolute right-0 top-0 w-full h-full object-cover scale-x-[-1] z-10"
-        />
+        <!-- image / glow -->
+        <div class="relative flex-1 flex items-center justify-center mt-8 sm:mt-0 sm:order-2">
+          <div class="absolute inset-0 z-0 opacity-30">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[350px]">
+              <div class="w-full h-full bg-[rgba(217,217,217,1)] blur-[100px]"></div>
+            </div>
+          </div>
+          <div class="relative z-10 w-[350px] h-[120px] md:w-[600px] md:h-[420px] flex items-center justify-center">
+            <img
+              src="./imgs/cover.png"
+              alt="Music Experience"
+              class="scale-x-[-1]"
+            />
+          </div>
+        </div>
       </div>
-    
-    </section> 
+    </section>
      <!-- End Cover -->
     <!-- Start Product -->
     <section class="max-w-[1170px] mx-auto mt-16">
@@ -2909,83 +2957,83 @@
         </div>
       </div>
       <button
-      class="block mx-auto w-full max-w-[180px] sm:max-w-[234px] h-[44px] sm:h-[56px] px-4 sm:px-12 py-2 sm:py-4 flex items-center justify-center bg-[rgba(219,68,68,1)] text-white rounded-[4px] text-sm sm:text-base transition hover:opacity-90"
+      class="mx-auto w-full max-w-[180px] sm:max-w-[234px] h-[44px] sm:h-[56px] px-4 sm:px-12 py-2 sm:py-4 flex items-center justify-center bg-[rgba(219,68,68,1)] text-white rounded-[4px] text-sm sm:text-base transition hover:opacity-90"
     >
       View All Products
     </button>    
     </section>
     <!-- End Product -->
     <!-- Start features -->
-     <section class="max-w-[1170px] mx-auto my-16">
-    <p class="flex items-center text-[rgba(219,68,68,1)] font-medium text-xl">
-      <span
-        class="w-5 sm:w-6 h-10 sm:h-12 rounded-md bg-[rgba(219,68,68,1)] mr-3 inline-block"></span>
-        Featured    </p>
-    <div class="my-16 flex flex-col sm:flex-row items-center sm:justify-between gap-4">
-      <h2 class="font-semibold text-4xl text-center sm:text-left w-full sm:w-auto">
-        New Arrival </h2>
-    </div>
-    <div class="max-w-[1170px] mx-auto px-4 sm:px-6 py-8">
-      <div class="flex flex-col lg:flex-row gap-6">
-          <div class="w-full lg:w-[570px] h-[400px] sm:h-[500px] lg:h-[600px] bg-[rgba(0,0,0,1)] rounded-[4px] overflow-hidden relative">
-              <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="rounded-[4px] shadow-2xl transform lg:translate-x-[29px] lg:translate-y-[89px] overflow-hidden">
-                      <img src="./imgs/main-c-1.png" alt="PlayStation 5" class="w-full h-full sm:w-[511px] sm:h-[511px] object-cover opacity-80">
-                  </div>
-              </div>
-              <div class="absolute bottom-4 left-4 sm:left-10 text-white py-4 rounded w-full sm:w-[242px] px-4 sm:px-0">
-                  <h3 class="font-semibold text-xl sm:text-2xl py-2 sm:py-3">PlayStation 5</h3>
-                  <p class="pb-2 leading-[21px] tracking-normal text-sm sm:text-base">Black and White version of the PS5 coming out on sale.</p>
-                  <span class="underline mb-4 py-3 text-sm sm:text-base">Shop Now</span>
-              </div>
-          </div>
-                    <div class="w-full lg:w-[570px] flex flex-col gap-6">
-              <div class="h-[250px] sm:h-[284px] bg-[rgba(13,13,13,1)] rounded-[4px] overflow-hidden relative">
-                  <div class="absolute inset-0 flex items-center justify-end">
-                      <div class="w-full sm:w-[432px] h-full sm:h-[286px] bg-[rgba(13,13,13,1)] rounded-[4px] shadow-2xl transform overflow-hidden">
-                          <img src="./imgs/main-c-2.jpg" alt="Women's Collections" class="w-full h-full object-cover scale-x-[-1] opacity-80">
-                      </div>
-                  </div>
-                  <div class="absolute bottom-4 left-4 sm:left-10 text-white rounded w-full sm:w-auto px-4 sm:px-0">
-                      <h3 class="font-semibold text-xl sm:text-2xl py-2 sm:py-3">Women's Collections</h3>
-                      <p class="leading-[21px] tracking-normal w-full sm:w-[255px] text-sm mb-4 sm:mb-4">Featured woman collections that give you another vibe.</p>
-                      <span class="underline mt-2 sm:mt-4 text-sm sm:text-base">Shop Now</span>
-                  </div>
-              </div>
-              
-              
-              <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                  <div class="w-full sm:w-[270px] h-[250px] sm:h-[284px] relative rounded-[4px] bg-black">
-                      <div class="absolute inset-0 bg-[rgba(217,217,217,0.9)] blur-[150px] sm:blur-[300px]"></div>
-                        <div class="absolute inset-0 flex items-center justify-center z-10">
-                          <img src="./imgs/main-c-3.png" alt="Speakers" class="w-[150px] h-[180px] sm:w-[190px] sm:h-[221px] object-cover rounded-[4px]">
-                      </div>
-                      
-                      <div class="absolute bottom-4 left-4 sm:left-6 z-20 text-white w-full sm:w-auto px-2 sm:px-0">
-                          <h3 class="font-semibold text-xl sm:text-2xl mb-1">Speakers</h3>
-                          <p class="leading-[21px] tracking-normal w-full sm:w-[191px] text-xs sm:text-sm mb-2 sm:mb-3">Amazon wireless speakers</p>
-                          <span class="underline text-xs sm:text-sm cursor-pointer">Shop Now</span>
-                      </div>
-                  </div>
-                  
-                  <div class="w-full sm:w-[270px] h-[250px] sm:h-[284px] relative rounded-[4px] overflow-hidden bg-black">
-                      <div class="absolute inset-0 bg-[rgba(217,217,217,0.9)] blur-[150px] sm:blur-[300px]"></div>    
-                      <div class="absolute inset-0 flex items-center justify-center z-10">
-                          <img src="./imgs/main-c-4.png" alt="Perfume" class="w-[160px] h-[170px] sm:w-[201px] sm:h-[203px] object-cover rounded-[4px]">
-                      </div>
-                      
-                      <!-- text content -->
-                      <div class="absolute bottom-4 left-4 z-20 text-white w-full sm:w-auto px-2 sm:px-0">
-                          <h3 class="font-semibold text-xl sm:text-2xl mb-1">Perfume</h3>
-                          <p class="leading-[21px] tracking-normal w-full sm:w-[191px] text-xs sm:text-sm mb-2 sm:mb-3">GUCCI INTENSE OUD EDP</p>
-                          <span class="underline text-xs sm:text-sm cursor-pointer">Shop Now</span>
-                      </div>
-                  </div>
-              </div>
-          </div>
+    <section class="max-w-[1170px] mx-auto my-16">
+      <p class="flex items-center text-[rgba(219,68,68,1)] font-medium text-xl">
+        <span
+          class="w-5 sm:w-6 h-10 sm:h-12 rounded-md bg-[rgba(219,68,68,1)] mr-3 inline-block"></span>
+          Featured    </p>
+      <div class="my-16 flex flex-col sm:flex-row items-center sm:justify-between gap-4">
+        <h2 class="font-semibold text-4xl text-center sm:text-left w-full sm:w-auto">
+          New Arrival </h2>
       </div>
-  </div>
-    </section>
+      <div class="max-w-[1170px] mx-auto px-4 sm:px-0 ">
+        <div class="flex flex-col lg:flex-row gap-6">
+            <div class="w-full lg:w-[570px] h-[400px] sm:h-[500px] lg:h-[600px] bg-[rgba(0,0,0,1)] rounded-[4px] overflow-hidden relative">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="rounded-[4px] shadow-2xl transform translate-y-[50px] overflow-hidden">
+                        <img src="./imgs/main-c-1.png" alt="PlayStation 5" class="w-full h-full sm:w-[511px] sm:h-[511px] object-cover opacity-80">
+                    </div>
+                </div>
+                <div class="absolute bottom-4 left-4 sm:left-10 text-white py-4 rounded w-full px-4 sm:px-0">
+                    <h3 class="font-semibold text-xl sm:text-2xl py-2">PlayStation 5</h3>
+                    <p class="pb-2 mb-4 leading-[21px] tracking-normal text-sm sm:text-base">Black and White version of the PS5 <br> coming out on sale.</p>
+                    <span class="underline mb-4 py-3 text-sm sm:text-base">Shop Now</span>
+                </div>
+            </div>
+                      <div class="w-full lg:w-[570px] flex flex-col gap-6">
+                <div class="h-[250px] sm:h-[284px] bg-[rgba(13,13,13,1)] rounded-[4px] overflow-hidden relative">
+                    <div class="absolute inset-0 flex items-center justify-end">
+                        <div class="w-full sm:w-[432px] h-full sm:h-[286px] bg-[rgba(13,13,13,1)] rounded-[4px] shadow-2xl transform overflow-hidden">
+                            <img src="./imgs/main-c-2.jpg" alt="Women's Collections" class="w-full h-full object-cover scale-x-[-1] opacity-80">
+                        </div>
+                    </div>
+                    <div class="absolute bottom-4 left-4 sm:left-10 text-white rounded w-full sm:w-auto px-4 sm:px-0">
+                        <h3 class="font-semibold text-xl sm:text-2xl py-2 sm:py-3">Women's Collections</h3>
+                        <p class="leading-[21px] tracking-normal w-full  text-sm mb-4 sm:mb-4">Featured woman collections that <br> give you another vibe.</p>
+                        <span class="underline mt-2 sm:mt-4 text-sm sm:text-base">Shop Now</span>
+                    </div>
+                </div>
+                
+                
+                <div class="flex flex-col mt-2 sm:flex-row gap-4 sm:gap-6">
+                    <div class="w-full sm:w-[270px] h-[250px] sm:h-[284px] relative rounded-[4px] bg-black">
+                        <div class="absolute inset-0 bg-[rgba(217,217,217,0.9)] blur-[150px] sm:blur-[300px]"></div>
+                          <div class="absolute inset-0 flex items-center justify-center z-10">
+                            <img src="./imgs/main-c-3.png" alt="Speakers" class="w-[150px] h-[180px] sm:w-[210px] sm:h-[222px] object-cover rounded-[4px]">
+                        </div>
+                        
+                        <div class="absolute bottom-4 left-4 sm:left-6 z-20 text-white w-full sm:w-auto px-2 sm:px-0">
+                            <h3 class="font-semibold text-xl sm:text-2xl mb-1">Speakers</h3>
+                            <p class="leading-[21px] tracking-normal w-full text-xs sm:text-sm mb-2 sm:mb-3 font-normal" >Amazon wireless speakers</p>
+                            <span class="underline text-xs sm:text-sm cursor-pointer">Shop Now</span>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full sm:w-[270px] h-[250px] sm:h-[284px] relative rounded-[4px] overflow-hidden bg-black">
+                        <div class="absolute inset-0 bg-[rgba(217,217,217,0.9)] blur-[150px] sm:blur-[300px]"></div>    
+                        <div class="absolute inset-0 flex items-center justify-center z-10">
+                            <img src="./imgs/main-c-4.png" alt="Perfume" class="w-[160px] h-[170px] sm:w-[201px] sm:h-[203px] object-cover rounded-[4px]">
+                        </div>
+                        
+                        <!-- text content -->
+                        <div class="absolute bottom-4 left-4 z-20 text-white w-full sm:w-auto px-2 sm:px-0">
+                            <h3 class="font-semibold text-xl sm:text-2xl mb-1">Perfume</h3>
+                            <p class="leading-[21px] tracking-normal w-full text-xs sm:text-sm mb-2 sm:mb-3">GUCCI INTENSE OUD EDP</p>
+                            <span class="underline text-xs sm:text-sm cursor-pointer">Shop Now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      </section>
     <!-- End features -->
     <!-- Start Properties -->
     <section
